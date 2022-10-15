@@ -3,6 +3,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 const app = express()
+const enquiryRouter = require('../routes/enquiry')
 
 // Middleware
 app.use(cors('*'))
@@ -16,5 +17,6 @@ app.get('/', (req, res) => {
         data: "contact your sys admin for access"
     })
 })
+app.use('/api/v1/enquiry', enquiryRouter)
 
 module.exports = app
