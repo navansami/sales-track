@@ -18,6 +18,9 @@ const enquirySchema = new mongoose.Schema({
     },
     comment: {
         type: Blob
+    },
+    status: {
+        type: Boolean
     }
 })
 
