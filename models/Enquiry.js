@@ -14,10 +14,10 @@ const enquirySchema = new mongoose.Schema({
         unique: true
     },
     pax: {
-        type: String
+        type: String,
     },
     comment: {
-        type: Blob
+        type: String
     },
     status: {
         type: Boolean

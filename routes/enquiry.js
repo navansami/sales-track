@@ -1,9 +1,10 @@
 const router = require('express').Router()
+const Enquiry = require('../controllers/enquiries');
 
 router
     .route('/')
-    .get(() => console.log('route not yet defined'))
-    .post(() => console.log('route not yet defined'))
+    .get(Enquiry.getAllEnquiries)
+    .post(Enquiry.addEnquiry)
     
 
 module.exports = router
